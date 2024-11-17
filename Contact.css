@@ -1,4 +1,4 @@
-html, body {
+html, body { 
     margin: 0;
     padding: 0;
     height: 100%;
@@ -54,10 +54,8 @@ html, body {
     6.55%, 100% { opacity: 0; }
 }
 
-/* General Styles */
 .contact-card {
-    width: 100vw;
-    height: auto;  /* Adjust height based on content */
+    width: 100vw;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,8 +65,12 @@ html, body {
     transition: transform 0.3s ease, opacity 0.3s ease;
     border-radius: 15px;
     cursor: pointer;
-    flex-shrink: 0;
-    padding: 20px;  /* Adds padding to avoid tightness */
+    flex-shrink: 0;  
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    opacity: 1;
 }
 
 .contact-card img {
@@ -83,38 +85,51 @@ html, body {
 .contact-card h3 {
     font-size: 30px;
     margin: 10px 0;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);  
+    font-weight: bold;  
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); 
 }
 
 .contact-card p {
     font-size: 20px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);  
+    font-weight: bold;  
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); 
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    flex-wrap: wrap;  /* Allows the icons to wrap in smaller screens */
+.contact-card .info p {
+    font-size: 15px;
+    color: rgb(255, 255, 255);  
+    font-weight: bold;  
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); 
 }
 
 .social-icons a {
     margin: 10px;
     text-decoration: none;
     font-size: 18px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
+    color: rgb(255, 255, 255);  
+    font-weight: bold;  
     transition: color 0.3s ease;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); 
 }
 
 .social-icons a:hover {
-    color: #030303;
+    color: #030303;  
+}
+
+.slider-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.slider-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .footer {
@@ -130,7 +145,6 @@ html, body {
     font-weight: bold;
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
     .slider-container {
         width: 90vw;
@@ -149,16 +163,13 @@ html, body {
     .contact-card p {
         font-size: 18px;
     }
-
-    .social-icons a {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 768px) {
     .slider-container {
         width: 95vw;
         height: 85vh;
+        background-position: center;
     }
 
     .contact-card img {
@@ -174,13 +185,9 @@ html, body {
         font-size: 16px;
     }
 
-    .social-icons a {
-        font-size: 14px;
-    }
-
     .footer {
         bottom: 10px;
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -202,13 +209,9 @@ html, body {
         font-size: 14px;
     }
 
-    .social-icons a {
-        font-size: 12px;
-    }
-
     .footer {
         bottom: 5px;
-        font-size: 10px;
+        font-size: 8px;
     }
 }
 
@@ -231,14 +234,9 @@ html, body {
         font-size: 12px;
     }
 
-    .social-icons a {
-        font-size: 10px;
-    }
-
     .footer {
         bottom: 5px;
-        font-size: 8px;
+        font-size: 7px;
     }
 }
-
 
