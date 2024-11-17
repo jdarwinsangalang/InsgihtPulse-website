@@ -2,7 +2,7 @@
 const accounts = [
     { email: "admin@gmail.com", password: "jaydarwin@", role: "admin" },
     { email: "johnmarkinramos@gmail.com", password: "09483405224", role: "user" },
-    { email: "leaunicejavier@gmail.com", password: "09100256299", role: "user" },
+    { email: "leunicejavier@gmail.com", password: "09100256299", role: "user" },
     { email: "fritziecabrerasiador@gmail.com", password: "09318980224", role: "user" },
     { email: "aegellizarte2606@gmail.com", password: "09854709646", role: "user" },
     { email: "mackahronmasangkay@gmail.com", password: "09483440695", role: "user" },
