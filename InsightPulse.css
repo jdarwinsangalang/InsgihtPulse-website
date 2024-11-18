@@ -59,7 +59,7 @@ body::before {
     background-position: center;
     padding: 15px 30px;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     position: relative;
     z-index: 100;
@@ -90,43 +90,63 @@ body::before {
 }
 
 .navbar-toggle {
-    display: none;
-    background-color: transparent;
+    display: none; 
+    background-color: rgba(255, 255, 255, 0.2); 
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+    z-index: 101; /* Ensures it stays on top */
+    transition: background 0.3s ease;
 }
 
+.navbar-toggle img {
+    width: 30px; /* Adjust logo size inside the button */
+    height: 30px;
+    border-radius: 50%; /* Ensures the logo is circular */
+    object-fit: cover;
+}
+
+.navbar-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Highlight on hover */
+}
+
+/* Responsive settings for phone users */
 @media (max-width: 768px) {
+    .navbar-toggle {
+        display: flex; /* Visible only for smaller screens */
+    }
+
     .navbar-links {
-        display: none;
+        display: none; /* Links hidden by default */
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 50px; /* Below the navbar */
         left: 0;
-        width: 100%;
+        width: 50%;
         background-color: rgba(0, 0, 0, 0.8);
         padding-top: 10px;
+        z-index: 100;
     }
-    .navbar-links a {
-        padding: 15px;
-        text-align: center;
-        border-top: 1px solid #444;
-        color: white;
+
+    .navbar-links.active {
+        display: flex; /* Display links when toggled */
     }
-    .navbar-toggle {
-        display: block;
-    }
-}
-.navbar-links.active {
-    display: flex;
 }
 
 .navbar .navbar-toggle:focus {
     outline: none;
 }
-
 .learn-more-btn, .get-started-btn {
     display: inline-block;
     padding: 12px 24px;
