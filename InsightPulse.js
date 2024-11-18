@@ -1,5 +1,5 @@
-
 function toggleNavbar() {
-    const navbarLinks = document.getElementById('navbar-links');
-    navbarLinks.classList.toggle('active');
+    const links = document.getElementById('navbar-links');
+    links.classList.toggle('active');
 }
+
